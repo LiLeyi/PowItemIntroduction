@@ -6,15 +6,7 @@
       "runtime_identifier": "minecraft:egg",
       "is_spawnable": false,
       "is_summonable": true,
-      "is_experimental": false,
-      "scripts": {
-        "animate": [
-          "ticking"
-        ]
-      },
-      "animations": {
-        "ticking": "controller.animation.particle_nightmare_ray"
-      }
+      "is_experimental": false
     },
     "component_groups": {},
     "components": {
@@ -53,7 +45,7 @@
         "offset": [
           0,
           0,
-          1
+          0
         ],
         "semirandomdiffdamage": true,
         "uncertaintyBase": 4.0,
@@ -68,7 +60,7 @@
     },
     "events": {
       "minecraft:explode": {
-        "run_command": {
+        "queue_command": {
           "command": [
             "fill ~-0.7~-0.7~-0.7~0.7~0.7~0.7 dec:nightmare_block [] replace air []",
             "particle dec:nightmare_block_spawn_particle ~~~",

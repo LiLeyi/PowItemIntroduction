@@ -11,7 +11,7 @@
     "components": {
       "minecraft:timer": {
         "looping": true,
-        "time": 0.3,
+        "time": 0.2,
         "time_down_event": {
           "event": "minecraft:particle"
         }
@@ -51,7 +51,7 @@
         "offset": [
           0,
           0,
-          1
+          0
         ],
         "semirandomdiffdamage": true,
         "uncertaintyBase": 3.0,
@@ -65,7 +65,7 @@
     },
     "events": {
       "minecraft:particle": {
-        "run_command": {
+        "queue_command": {
           "command": [
             "particle dec:everlasting_winter_wake_particle ~~~"
           ]

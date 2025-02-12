@@ -161,6 +161,7 @@
         "event": "minecraft:next",
         "target": "self"
       },
+      "minecraft:tick_world": {},
       "minecraft:boss": {
         "should_darken_sky": false,
         "name": "boss.dec:ash_knight_head.name",
@@ -169,7 +170,7 @@
     },
     "events": {
       "minecraft:next": {
-        "run_command": {
+        "queue_command": {
           "command": [//这里也记得改
             "summon dec:ash_monster ~~~",
             "summon dec:ash_monster ~~~"
@@ -178,11 +179,11 @@
         }
       },
       "minecraft:thorn_attack": {
-        "run_command": {
+        "queue_command": {
           "command": [
-            "execute if entity @a[r=64,c=1,m=!1] run summon dec:ash_sword_phantom ~~2~",
-            "execute if entity @a[r=64,c=1,m=!1] run particle dec:ash_sword_phantom_particle ~~2~",
-            "execute if entity @a[r=64,c=1,m=!1] run summon dec:group ~~~ 0 0 minecraft:select_blackstone_thorn"
+            "execute if entity @a[r=64,c=1,tag=gaming] run summon dec:ash_sword_phantom ~~2~",
+            "execute if entity @a[r=64,c=1,tag=gaming] run particle dec:ash_sword_phantom_particle ~~2~",
+            "execute if entity @a[r=64,c=1,tag=gaming] run summon dec:group ~~~ 0 0 minecraft:select_blackstone_thorn"
           ],
           "target": "self"
         }

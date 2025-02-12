@@ -152,6 +152,7 @@
       "minecraft:experience_reward": {
         "on_death": "query.last_hit_by_player ? 100 : 0"
       },
+      "minecraft:tick_world": {},
       "minecraft:boss": {
         "should_darken_sky": false,
         "hud_range": 64,
@@ -291,14 +292,14 @@
             "minecraft:no_partner"
           ]
         },
-        "run_command": {
+        "queue_command": {
           "command": [
             "particle dec:ghost_spurt_big_particle ~~1~"
           ]
         }
       },
       "minecraft:die": {
-        "run_command": {
+        "queue_command": {
           "command": [
             "event entity @e[c=1,r=64,type=dec:shadow_soul_1] minecraft:no_partner"
           ],
@@ -312,7 +313,7 @@
       },
       "minecraft:time_down": {
         "trigger": "minecraft:has_partner_stay",
-        "run_command": {
+        "queue_command": {
           "command": [
             "event entity @e[c=1,r=64,type=dec:shadow_soul_1] minecraft:has_partner_attack"
           ],

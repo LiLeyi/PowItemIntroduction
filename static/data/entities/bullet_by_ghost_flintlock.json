@@ -41,7 +41,7 @@
             }
           },
           "impact_damage": {
-            "damage": 13,
+            "damage": 17,
             "knockback": true,
             "catchFire": false,
             "semirandomdiffdamage": false
@@ -55,11 +55,11 @@
         "offset": [
           0,
           0,
-          1
+          0
         ],
         "semirandomdiffdamage": true,
-        "uncertaintyBase": 2.0,
-        "uncertaintyMultiplier": 0.5,
+        "uncertaintyBase": 0,
+        "uncertaintyMultiplier": 0,
         "reflectOnHurt": true
       },
       "minecraft:pushable": {
@@ -80,7 +80,7 @@
           },
           {
             "weight": 3,
-            "run_command": {
+            "queue_command": {
               "command": [
                 "summon dec:friendly_little_soul ~~~",
                 "particle dec:ghost_spurt_particle ~~1~"

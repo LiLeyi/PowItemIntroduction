@@ -54,6 +54,8 @@
       "minecraft:type_family": {
         "family": [
           "creeper",
+          "shadow_creeper",
+          "shadow",
           "monster",
           "mob"
         ]
@@ -219,7 +221,7 @@
             "minecraft:exploding"
           ]
         },
-        "run_command": {
+        "queue_command": {
           "command": [
             "tp ~~5~"
           ]

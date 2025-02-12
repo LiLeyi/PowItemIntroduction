@@ -43,6 +43,7 @@
         "width": 5,
         "height": 5
       },
+      "minecraft:tick_world": {},
       "minecraft:boss": {
         "should_darken_sky": true,
         "name": "boss.dec:everlasting_winter_ghast.name",
@@ -198,14 +199,14 @@
         }
       },
       "minecraft:die": {
-        "run_command": {
+        "queue_command": {
           "command": [
             "event entity @e[type=dec:everlasting_winter_ghast_anchor,c=1] minecraft:die"
           ]
         }
       },
       "minecraft:entity_spawned": {
-        "run_command": {
+        "queue_command": {
           "command": [
             "particle dec:frozen_shield_particle ~~~"
           ]
@@ -235,7 +236,7 @@
         "randomize": [
           {
             "weight": 1,
-            "run_command": {
+            "queue_command": {
               "command": [
                 "execute at @e[type=dec:everlasting_winter_ghast_anchor,c=1] run tp ~20~13~20"
               ]
@@ -243,7 +244,7 @@
           },
           {
             "weight": 1,
-            "run_command": {
+            "queue_command": {
               "command": [
                 "execute at @e[type=dec:everlasting_winter_ghast_anchor,c=1] run tp ~-20~13~20"
               ]
@@ -251,7 +252,7 @@
           },
           {
             "weight": 1,
-            "run_command": {
+            "queue_command": {
               "command": [
                 "execute at @e[type=dec:everlasting_winter_ghast_anchor,c=1] run tp ~18~16~"
               ]
@@ -259,7 +260,7 @@
           },
           {
             "weight": 1,
-            "run_command": {
+            "queue_command": {
               "command": [
                 "execute at @e[type=dec:everlasting_winter_ghast_anchor,c=1] run tp ~~16~18"
               ]
@@ -271,7 +272,7 @@
         "randomize": [
           {
             "weight": 1,
-            "run_command": {
+            "queue_command": {
               "command": [
                 "execute at @e[type=dec:everlasting_winter_ghast_anchor,c=1] run tp ~-20~13~-20"
               ]
@@ -279,7 +280,7 @@
           },
           {
             "weight": 1,
-            "run_command": {
+            "queue_command": {
               "command": [
                 "execute at @e[type=dec:everlasting_winter_ghast_anchor,c=1] run tp ~20~13~-20"
               ]
@@ -287,7 +288,7 @@
           },
           {
             "weight": 1,
-            "run_command": {
+            "queue_command": {
               "command": [
                 "execute at @e[type=dec:everlasting_winter_ghast_anchor,c=1] run tp ~-18~16~"
               ]
@@ -295,7 +296,7 @@
           },
           {
             "weight": 1,
-            "run_command": {
+            "queue_command": {
               "command": [
                 "execute at @e[type=dec:everlasting_winter_ghast_anchor,c=1] run tp ~~16~-18"
               ]
@@ -307,7 +308,7 @@
         "randomize": [
           {
             "weight": 1,
-            "run_command": {
+            "queue_command": {
               "command": [
                 "summon dec:frozen_shadow ^6^^"
               ]
@@ -315,7 +316,7 @@
           },
           {
             "weight": 1,
-            "run_command": {
+            "queue_command": {
               "command": [
                 "summon dec:frozen_shadow ^-6^^"
               ]
@@ -323,7 +324,7 @@
           },
           {
             "weight": 1,
-            "run_command": {
+            "queue_command": {
               "command": [
                 "summon dec:frozen_shadow ^^6^"
               ]
@@ -331,7 +332,7 @@
           },
           {
             "weight": 1,
-            "run_command": {
+            "queue_command": {
               "command": [
                 "summon dec:frozen_shadow ^^-6^"
               ]
@@ -339,7 +340,7 @@
           },
           {
             "weight": 1,
-            "run_command": {
+            "queue_command": {
               "command": [
                 "summon dec:frozen_ghast ^6^^ minecraft:from_boss"
               ]
@@ -347,7 +348,7 @@
           },
           {
             "weight": 1,
-            "run_command": {
+            "queue_command": {
               "command": [
                 "summon dec:frozen_ghast ^-6^^ minecraft:from_boss"
               ]
@@ -355,7 +356,7 @@
           },
           {
             "weight": 1,
-            "run_command": {
+            "queue_command": {
               "command": [
                 "summon dec:frozen_ghast ^^6^ minecraft:from_boss"
               ]
@@ -363,7 +364,7 @@
           },
           {
             "weight": 1,
-            "run_command": {
+            "queue_command": {
               "command": [
                 "summon dec:frozen_ghast ^^-6^ minecraft:from_boss"
               ]

@@ -93,8 +93,8 @@
         "suffocateTime": 0
       },
       "minecraft:health": {
-        "value": 100,
-        "max": 100
+        "value": 150,
+        "max": 150
       },
       "minecraft:knockback_resistance": {
         "value": 1
@@ -140,6 +140,7 @@
         "name": "boss.dec:abyssal_controller.name",
         "hud_range": 64
       },
+      "minecraft:tick_world": {},
       "minecraft:follow_range": {
         "value": 256,
         "max": 256
@@ -208,8 +209,9 @@
             "minecraft:scattering_shoot"
           ]
         },
-        "run_command": {
+        "queue_command": {
           "command": [
+            "effect @s resistance 6 5",
             "particle dec:abyssal_controller_spawn_particle ~~~",
             "particle dec:abyssal_controller_spawn_particle ~~~",
             "particle dec:abyssal_controller_spawn_particle ~~~"

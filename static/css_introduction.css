@@ -1,153 +1,425 @@
-@charset "UTF-8";
-
-html,
-body {
-    height: 100%;
-    color: rgba(255, 255, 255, 0.6);
-    font-size: 3vh;
-    font-family: unset;
-    text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.15);
+/* 整体布局优化 */
+#main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
 }
 
 body {
-    background: no-repeat url(background.png) center center;
-    background-size: cover;
     margin: 0;
-    padding: 5vh;
+    padding: 5%;
     position: relative;
     background-attachment: fixed;
 }
 
-#title {
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 70px;
-    font-family: unset;
+
+.item-card {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.card-wrapper {
+    padding: 2rem;
+}
+
+/* 头部样式 */
+.item-header {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.item-title {
+    font-size: 2rem;
+    color: #2c3e50;
+    flex: 1;
+}
+
+.item-subtitle {
+    color: #7f8c8d;
+    font-size: 1.2rem;
+    margin-left: 0.5rem;
+}
+
+/* 图片样式 */
+.item-image-container {
+    flex-shrink: 0;
+}
+
+.item-image {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    image-rendering: pixelated;
+}
+
+/* 内容区域 */
+.item-content {
+    display: grid;
+    gap: 2rem;
+}
+
+.stats-section {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-bottom: 1.5rem;
+    padding-top: 0.5rem;
+}
+
+.stats-section h3 {
+    color: #34495e;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #3498db;
+}
+
+/* 网格布局 */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+/* 表格优化 */
+.markdown-table {
+    width: 100%;
+    border: 1px solid #e0e0e0;
+}
+
+.markdown-table th {
+    background: #3498db;
+    color: white;
+    font-weight: 600;
+    padding: 12px;
+}
+
+.markdown-table td {
+    padding: 12px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.markdown-table tr:hover {
+    background-color: #f4f7f9;
+}
+
+/* 按钮样式 */
+.modern-button {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.modern-button:hover {
+    background: #2980b9;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.action-buttons {
+    margin-top: 2rem;
     text-align: center;
-    text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.15);
-    padding-bottom: 20px;
 }
 
-#js_item_name_lang {
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 5vh;
-    font-family: unset;
-    text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.15);
-    padding-bottom: 20px;
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .item-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .item-title {
+        font-size: 1.5rem;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .markdown-table {
+        font-size: 0.9rem;
+    }
 }
 
-#js_item_basic {
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 4vh;
-    font-family: unset;
-    text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.15);
-    padding-bottom: 20px;
-}
-#js_item_access {
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 4vh;
-    font-family: unset;
-    text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.15);
-    padding-bottom: 20px;
+/* 描述区块 */
+.item-description {
+    background: #f8f9fa;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-bottom: 1.5rem;
+    padding-top: 0rem;
+    border-radius: 8px;
+    line-height: 1.6;
+    color: #34495e;
 }
 
-.recipe_li {
-    background-color: rgba(255, 255, 255, 0.15);
-    display: flex;
+
+
+
+/* 更新后的合成卡片样式 */
+.recipe-card {
+    background: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+    padding: 1rem;
+    margin: 0.5rem 0;
+    width: 300px;
+    flex: 1;
+}
+
+
+/* 横向输出布局 */
+.recipe-output {
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    border-radius: 10px;
-    padding: 10px;
-    padding-left: 0.7vh;
-    padding-top: 0.7vh;
-    padding-bottom: 0.7vh;
-    margin-top: 1.5vh;
+    font-size: 0.85rem;
+    margin-top: 0.8rem;
+    padding: 0.5rem 0.8rem;
+    background: #f8fafc;
+    border-radius: 6px;
+}
+
+.output-item {
+    font-weight: 600;
+    color: #2b6cb0;
+    max-width: 120px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* 箭头样式优化 */
+.recipe-output::before {
+    content: "➔";
+    margin: 0 4px;
+    animation: none;
+    color: #718096;
+}
+
+/* 鼠标悬停效果优化 */
+.recipe-card:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* 在css_introduction.css中添加 */
+.crafting-grid {
+    display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% - 2rem);
+    gap: 1.5rem;
+    padding: 1rem;
 }
 
-.rec_a{
+.recipe-pattern {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4px;
+    width: 120px;
+    padding-right: 10px;
+    margin: 1rem auto;
+}
+
+.recipe-slot {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #666;
+    background: #ddd;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
-.rec_icon{
+.recipe-icon {
+    width: 36px;
+    height: 36px;
+    image-rendering: pixelated;
+}
+
+.recipe-meta {
+    margin-top: 1rem;
+    color: #666;
+    font-size: 0.9em;
+}
+.rec_icon {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    background: #f8f9fa;
+    border-radius: 8px;
     position: relative;
-    width: 3.5vh;
-    height: 3.5vh;
+    top: 6px;
+    padding: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     image-rendering: pixelated;
-    background-color: rgba(255, 255, 255, 0.2);
-    padding: 0.1vh;
+}
+
+
+
+
+
+/* 更新后的掉落样式 */
+.loot-section {
+}
+
+.loot-category {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+}
+
+.loot-item {
+    display: flex;
+    align-items: center;
+    padding: 1.2rem;
+    background: #ffffff;
     border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease;
+    min-height: 70px;
 }
 
-#main {
-    background-color: rgba(255, 255, 255, 0.2);
-    padding: 10px;
-    padding-left: 20px;
-    border-radius: 10px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    word-wrap: break-word;
+.loot-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 8px rgba(0,0,0,0.1);
 }
 
-#button_back {
-    color: rgba(255, 255, 255, 0.6);
-    text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.15);
-    background-color: rgba(255, 255, 255, 0.2);
-    border: rgba(0, 0, 0, 0);
-    border-radius: 10px;
-    margin-top: 10px;
-    -webkit-transition: color .5s;
-    transition: color .5s;
-    text-decoration: none;
-    transition-duration: 0.5s;
-    transition-delay: 0s;
-    transition-property: all;
-    width: 7vh;
-    height: 7vh;
-    font-size: 2vh;
+.loot-icon {
+    width: 36px;
+    height: 36px;
+    margin-right: 1.2rem;
+    flex-shrink: 0;
+    border-radius: 6px;
+    padding: 4px;
+    background: #f8f9fa;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
-a {
-    -webkit-transition: color .5s;
-    transition: color .5s;
-    text-decoration: none;
+.loot-content {
+    flex: 1;
+    min-width: 0;
 }
 
-a:link {
-    color: rgba(255, 255, 255, 0.5)
+.loot-label {
+    font-weight: 500;
+    color: #2c3e50;
+    display: block;
+    margin-bottom: 0.3rem;
+    font-size: 0.95rem;
 }
 
-a:visited {
-    color: rgba(255, 255, 255, 1)
+.loot-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-a:hover {
-    color: rgba(255, 255, 255, 1)
+.loot-source {
+    color: #7f8c8d;
+    font-size: 0.85em;
+    width: 100%;
 }
 
-a:active {
-    color: rgba(255, 255, 255, 1)
+.loot-probability {
+    color: #fff;
+    background: #2ecc71;
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 0.8em;
+    font-weight: 500;
+    margin-left: 0.5rem;
 }
 
-#button_back:link {
-    color: rgba(255, 255, 255, 0.5);
-    background-color: rgba(255, 255, 255, 0.4)
+
+/* 响应式优化 */
+@media (max-width: 768px) {
+    .loot-category {
+        grid-template-columns: 1fr;
+    }
+    
+    .loot-item {
+        padding: 1rem;
+    }
+    
+    .section-title {
+        font-size: 1.1rem;
+    }
 }
 
-#button_back:hover {
-    color: rgba(255, 255, 255, 1);
-    background-color: rgba(255, 255, 255, 0.4)
+
+
+.custom-alert {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0,0,0,0.9);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    display: none;
+    z-index: 1000;
+    max-width: 80%;
+    text-align: center;
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
 }
 
-#button_back:active {
-    color: rgba(255, 255, 255, 1);
-    background-color: rgba(255, 255, 255, 0.4)
+.alert-text-en { display: block; font-size: 14px; }
+.alert-text-zh { display: block; font-size: 12px; opacity: 0.8; }
+
+@media (max-width: 768px) {
+    .custom-alert {
+        bottom: 10px;
+        padding: 8px 16px;
+    }
 }
 
-.item_icon {
-    width: 20vh;
-    height: 20vh;
-    image-rendering: pixelated;
-    background-color: rgba(255, 255, 255, 0.2);
-    padding: 5vh;
-    border-radius: 10px;
+
+.furnace-recipe {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+
+.furnace-icon {
+    width: 40px;
+    position: relative;
+}
+
+
+.furnace-input {
+    margin-top: 0.5rem;
+    color: #666;
+    font-size: 0.9em;
+}
+.furnace-tags {
+    margin-top: 0.5rem;
+    color: #666;
+    font-size: 0.9em;
 }

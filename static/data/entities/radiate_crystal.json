@@ -307,7 +307,8 @@
         "should_darken_sky": false,
         "name": "event.dec:radiate_crystal.name",
         "hud_range": 64
-      }
+      },
+      "minecraft:tick_world": {}
     },
     "events": {
       "minecraft:despawn": {
@@ -347,7 +348,7 @@
             "minecraft:first_spawn"
           ]
         },
-        "run_command": {
+        "queue_command": {
           "command": [
             "damage @s 20000 magic"
           ]
@@ -364,7 +365,7 @@
             "minecraft:second_spawn"
           ]
         },
-        "run_command": {
+        "queue_command": {
           "command": [
             "damage @s 20000 magic"
           ]
@@ -381,7 +382,7 @@
             "minecraft:third_spawn"
           ]
         },
-        "run_command": {
+        "queue_command": {
           "command": [
             "damage @s 20000 magic"
           ]
@@ -398,7 +399,7 @@
             "minecraft:fourth_spawn"
           ]
         },
-        "run_command": {
+        "queue_command": {
           "command": [
             "damage @s 20000 magic"
           ]
@@ -410,7 +411,7 @@
             "minecraft:fifth_spawn"
           ]
         },
-        "run_command": {
+        "queue_command": {
           "command": [
             "tellraw @a { \"rawtext\" : [ { \"translate\" : \"text.dec:radiate_crystal_defeated.name\" } ] }",
             "kill @s"

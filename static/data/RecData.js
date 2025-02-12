@@ -1373,8 +1373,8 @@ window.RecData = {
         "result": [
             {
                 "item": "dec:bat_bait",
-                "data": -1,
-                "count": 1
+                "count": 10,
+                "data": -1
             }
         ]
     },
@@ -2062,8 +2062,8 @@ window.RecData = {
         "result": [
             {
                 "item": "dec:book_of_deep",
-                "data": -1,
-                "count": 1
+                "count": 10,
+                "data": -1
             }
         ]
     },
@@ -2529,8 +2529,8 @@ window.RecData = {
         "result": [
             {
                 "item": "dec:challenge_of_ash",
-                "data": -1,
-                "count": 1
+                "count": 10,
+                "data": -1
             }
         ]
     },
@@ -3767,6 +3767,68 @@ window.RecData = {
             }
         ]
     },
+    "dec:crimson_lamp": {
+        "type": "shaped",
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            [
+                [
+                    "minecraft:shroomlight",
+                    -1
+                ],
+                [
+                    "minecraft:nether_wart_block",
+                    -1
+                ],
+                [
+                    "minecraft:shroomlight",
+                    -1
+                ]
+            ],
+            [
+                [
+                    "minecraft:shroomlight",
+                    -1
+                ],
+                [
+                    "minecraft:crimson_fungus",
+                    -1
+                ],
+                [
+                    "minecraft:shroomlight",
+                    -1
+                ]
+            ],
+            [
+                [
+                    "minecraft:shroomlight",
+                    -1
+                ],
+                [
+                    "minecraft:nether_wart_block",
+                    -1
+                ],
+                [
+                    "minecraft:shroomlight",
+                    -1
+                ]
+            ]
+        ],
+        "count": {
+            "minecraft:shroomlight": 6,
+            "minecraft:nether_wart_block": 2,
+            "minecraft:crimson_fungus": 1
+        },
+        "result": [
+            {
+                "item": "dec:crimson_lamp",
+                "count": 3,
+                "data": -1
+            }
+        ]
+    },
     "dec:crying_boots": {
         "type": "shaped",
         "tags": [
@@ -4162,8 +4224,8 @@ window.RecData = {
         "result": [
             {
                 "item": "dec:dark_pearl",
-                "data": -1,
-                "count": 1
+                "count": 10,
+                "data": -1
             }
         ]
     },
@@ -4223,8 +4285,8 @@ window.RecData = {
         "result": [
             {
                 "item": "dec:dark_stone",
-                "data": -1,
-                "count": 1
+                "count": 10,
+                "data": -1
             }
         ]
     },
@@ -5046,15 +5108,15 @@ window.RecData = {
         "pattern": [
             [
                 [
-                    "minecraft:phantom_membrane",
+                    "dec:ender_breath",
                     -1
                 ],
                 [
-                    "minecraft:phantom_membrane",
+                    "dec:ender_substance",
                     -1
                 ],
                 [
-                    "minecraft:phantom_membrane",
+                    "dec:ender_breath",
                     -1
                 ]
             ],
@@ -5064,7 +5126,7 @@ window.RecData = {
                     -1
                 ],
                 [
-                    "minecraft:lead",
+                    "dec:hemp_rope",
                     -1
                 ],
                 [
@@ -5078,7 +5140,7 @@ window.RecData = {
                     -1
                 ],
                 [
-                    "minecraft:phantom_membrane",
+                    "dec:ender_core",
                     -1
                 ],
                 [
@@ -5088,9 +5150,12 @@ window.RecData = {
             ]
         ],
         "count": {
-            "minecraft:phantom_membrane": 6,
+            "dec:ender_breath": 2,
+            "dec:ender_substance": 1,
             "dec:complete_bat_wing": 2,
-            "minecraft:lead": 1
+            "dec:hemp_rope": 1,
+            "minecraft:phantom_membrane": 2,
+            "dec:ender_core": 1
         },
         "result": [
             {
@@ -6550,8 +6615,8 @@ window.RecData = {
         "result": [
             {
                 "item": "dec:entity_soul",
-                "data": -1,
-                "count": 1
+                "count": 10,
+                "data": -1
             }
         ]
     },
@@ -7279,6 +7344,37 @@ window.RecData = {
                 "item": "dec:final_crystal_nucleus",
                 "data": -1,
                 "count": 1
+            }
+        ]
+    },
+    "dec:fire_charge_by_lava_essence": {
+        "type": "shaped",
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            [
+                [
+                    "minecraft:gunpowder",
+                    -1
+                ]
+            ],
+            [
+                [
+                    "dec:lava_essence",
+                    -1
+                ]
+            ]
+        ],
+        "count": {
+            "minecraft:gunpowder": 1,
+            "dec:lava_essence": 1
+        },
+        "result": [
+            {
+                "item": "minecraft:fire_charge",
+                "count": 3,
+                "data": -1
             }
         ]
     },
@@ -8125,6 +8221,15 @@ window.RecData = {
         "pattern": "dec:ancient_ice",
         "result": "dec:ice_ingot"
     },
+    "dec:furnace_bamboo_katana": {
+        "type": "furnace",
+        "tags": [
+            "furnace",
+            "campfire"
+        ],
+        "pattern": "dec:bamboo_katana",
+        "result": "dec:hard_bamboo_katana"
+    },
     "dec:furnace_bucket": {
         "type": "furnace",
         "tags": [
@@ -8804,6 +8909,55 @@ window.RecData = {
             }
         ]
     },
+    "dec:gas_bomb": {
+        "type": "shaped",
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            [
+                null,
+                [
+                    "dec:smoke_bomb",
+                    -1
+                ],
+                null
+            ],
+            [
+                [
+                    "dec:smoke_bomb",
+                    -1
+                ],
+                [
+                    "dec:poison_gland",
+                    -1
+                ],
+                [
+                    "dec:smoke_bomb",
+                    -1
+                ]
+            ],
+            [
+                null,
+                [
+                    "dec:smoke_bomb",
+                    -1
+                ],
+                null
+            ]
+        ],
+        "count": {
+            "dec:smoke_bomb": 4,
+            "dec:poison_gland": 1
+        },
+        "result": [
+            {
+                "item": "dec:gas_bomb",
+                "count": 4,
+                "data": -1
+            }
+        ]
+    },
     "dec:ghost_dagger": {
         "type": "shaped",
         "tags": [
@@ -9354,6 +9508,296 @@ window.RecData = {
                 "item": "dec:god_of_sun",
                 "data": -1,
                 "count": 1
+            }
+        ]
+    },
+    "dec:golden_bookshelf": {
+        "type": "shaped",
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            [
+                [
+                    "minecraft:book",
+                    -1
+                ],
+                [
+                    "minecraft:book",
+                    -1
+                ],
+                [
+                    "minecraft:book",
+                    -1
+                ]
+            ],
+            [
+                null,
+                [
+                    "dec:golden_bookshelf_frame",
+                    -1
+                ],
+                null
+            ]
+        ],
+        "count": {
+            "minecraft:book": 3,
+            "dec:golden_bookshelf_frame": 1
+        },
+        "result": [
+            {
+                "item": "dec:golden_bookshelf",
+                "data": -1,
+                "count": 1
+            }
+        ]
+    },
+    "dec:golden_bookshelf_frame": {
+        "type": "shaped",
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            [
+                [
+                    "minecraft:crimson_planks",
+                    -1
+                ],
+                [
+                    "minecraft:red_dye",
+                    -1
+                ],
+                [
+                    "minecraft:crimson_planks",
+                    -1
+                ]
+            ],
+            [
+                [
+                    "minecraft:crimson_planks",
+                    -1
+                ],
+                [
+                    "minecraft:gold_ingot",
+                    -1
+                ],
+                [
+                    "minecraft:crimson_planks",
+                    -1
+                ]
+            ],
+            [
+                [
+                    "minecraft:crimson_planks",
+                    -1
+                ],
+                [
+                    "minecraft:red_dye",
+                    -1
+                ],
+                [
+                    "minecraft:crimson_planks",
+                    -1
+                ]
+            ]
+        ],
+        "count": {
+            "minecraft:crimson_planks": 6,
+            "minecraft:red_dye": 2,
+            "minecraft:gold_ingot": 1
+        },
+        "result": [
+            {
+                "item": "dec:golden_bookshelf_frame",
+                "count": 6,
+                "data": -1
+            }
+        ]
+    },
+    "dec:golden_chain": {
+        "type": "shaped",
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            [
+                [
+                    "minecraft:chain",
+                    -1
+                ],
+                [
+                    "minecraft:gold_nugget",
+                    -1
+                ],
+                [
+                    "minecraft:chain",
+                    -1
+                ]
+            ],
+            [
+                [
+                    "minecraft:chain",
+                    -1
+                ],
+                [
+                    "dec:lace_block_black",
+                    -1
+                ],
+                [
+                    "minecraft:chain",
+                    -1
+                ]
+            ],
+            [
+                [
+                    "minecraft:chain",
+                    -1
+                ],
+                [
+                    "minecraft:red_dye",
+                    -1
+                ],
+                [
+                    "minecraft:chain",
+                    -1
+                ]
+            ]
+        ],
+        "count": {
+            "minecraft:chain": 6,
+            "minecraft:gold_nugget": 1,
+            "dec:lace_block_black": 1,
+            "minecraft:red_dye": 1
+        },
+        "result": [
+            {
+                "item": "dec:golden_chain",
+                "count": 6,
+                "data": -1
+            }
+        ]
+    },
+    "dec:golden_fence": {
+        "type": "shaped",
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            [
+                [
+                    "minecraft:nether_brick_fence",
+                    -1
+                ],
+                [
+                    "minecraft:red_dye",
+                    -1
+                ],
+                [
+                    "minecraft:nether_brick_fence",
+                    -1
+                ]
+            ],
+            [
+                [
+                    "minecraft:nether_brick_fence",
+                    -1
+                ],
+                [
+                    "minecraft:gold_nugget",
+                    -1
+                ],
+                [
+                    "minecraft:nether_brick_fence",
+                    -1
+                ]
+            ],
+            [
+                [
+                    "minecraft:nether_brick_fence",
+                    -1
+                ],
+                [
+                    "minecraft:red_dye",
+                    -1
+                ],
+                [
+                    "minecraft:nether_brick_fence",
+                    -1
+                ]
+            ]
+        ],
+        "count": {
+            "minecraft:nether_brick_fence": 6,
+            "minecraft:red_dye": 2,
+            "minecraft:gold_nugget": 1
+        },
+        "result": [
+            {
+                "item": "dec:golden_fence",
+                "count": 6,
+                "data": -1
+            }
+        ]
+    },
+    "dec:golden_lamp": {
+        "type": "shaped",
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            [
+                [
+                    "minecraft:glowstone",
+                    -1
+                ],
+                [
+                    "minecraft:red_dye",
+                    -1
+                ],
+                [
+                    "minecraft:glowstone",
+                    -1
+                ]
+            ],
+            [
+                [
+                    "minecraft:glowstone",
+                    -1
+                ],
+                [
+                    "minecraft:gold_nugget",
+                    -1
+                ],
+                [
+                    "minecraft:glowstone",
+                    -1
+                ]
+            ],
+            [
+                [
+                    "minecraft:glowstone",
+                    -1
+                ],
+                [
+                    "minecraft:red_dye",
+                    -1
+                ],
+                [
+                    "minecraft:glowstone",
+                    -1
+                ]
+            ]
+        ],
+        "count": {
+            "minecraft:glowstone": 6,
+            "minecraft:red_dye": 2,
+            "minecraft:gold_nugget": 1
+        },
+        "result": [
+            {
+                "item": "dec:golden_lamp",
+                "count": 3,
+                "data": -1
             }
         ]
     },
@@ -10803,6 +11247,177 @@ window.RecData = {
                 "item": "dec:jellyfish_staff",
                 "data": -1,
                 "count": 1
+            }
+        ]
+    },
+    "dec:lace_block_black": {
+        "type": "shaped",
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            [
+                [
+                    "minecraft:black_wool",
+                    -1
+                ],
+                [
+                    "minecraft:black_wool",
+                    -1
+                ],
+                [
+                    "minecraft:black_wool",
+                    -1
+                ]
+            ],
+            [
+                [
+                    "minecraft:black_wool",
+                    -1
+                ],
+                [
+                    "minecraft:web",
+                    -1
+                ],
+                [
+                    "minecraft:black_wool",
+                    -1
+                ]
+            ],
+            [
+                [
+                    "minecraft:black_wool",
+                    -1
+                ],
+                [
+                    "minecraft:black_wool",
+                    -1
+                ],
+                [
+                    "minecraft:black_wool",
+                    -1
+                ]
+            ]
+        ],
+        "count": {
+            "minecraft:black_wool": 8,
+            "minecraft:web": 1
+        },
+        "result": [
+            {
+                "item": "dec:lace_block_black",
+                "count": 16,
+                "data": -1
+            }
+        ]
+    },
+    "dec:lace_block_light_red": {
+        "type": "shaped",
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            [
+                [
+                    "minecraft:red_wool",
+                    -1
+                ],
+                [
+                    "minecraft:red_wool",
+                    -1
+                ],
+                [
+                    "minecraft:red_wool",
+                    -1
+                ]
+            ],
+            [
+                [
+                    "minecraft:red_wool",
+                    -1
+                ],
+                [
+                    "minecraft:web",
+                    -1
+                ],
+                [
+                    "minecraft:red_wool",
+                    -1
+                ]
+            ],
+            [
+                [
+                    "minecraft:red_wool",
+                    -1
+                ],
+                [
+                    "minecraft:red_wool",
+                    -1
+                ],
+                [
+                    "minecraft:red_wool",
+                    -1
+                ]
+            ]
+        ],
+        "count": {
+            "minecraft:red_wool": 8,
+            "minecraft:web": 1
+        },
+        "result": [
+            {
+                "item": "dec:lace_block_light_red",
+                "count": 16,
+                "data": -1
+            }
+        ]
+    },
+    "dec:lampshade": {
+        "type": "shaped",
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            [
+                null,
+                [
+                    "minecraft:iron_ingot",
+                    -1
+                ],
+                null
+            ],
+            [
+                [
+                    "minecraft:iron_ingot",
+                    -1
+                ],
+                [
+                    "minecraft:red_dye",
+                    -1
+                ],
+                [
+                    "minecraft:iron_ingot",
+                    -1
+                ]
+            ],
+            [
+                null,
+                [
+                    "minecraft:iron_ingot",
+                    -1
+                ],
+                null
+            ]
+        ],
+        "count": {
+            "minecraft:iron_ingot": 4,
+            "minecraft:red_dye": 1
+        },
+        "result": [
+            {
+                "item": "dec:lampshade",
+                "count": 4,
+                "data": -1
             }
         ]
     },
@@ -12333,6 +12948,37 @@ window.RecData = {
             }
         ]
     },
+    "dec:magma_cream_by_lava_essence": {
+        "type": "shaped",
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            [
+                [
+                    "dec:lava_nugget",
+                    -1
+                ]
+            ],
+            [
+                [
+                    "dec:lava_essence",
+                    -1
+                ]
+            ]
+        ],
+        "count": {
+            "dec:lava_nugget": 1,
+            "dec:lava_essence": 1
+        },
+        "result": [
+            {
+                "item": "minecraft:fire_charge",
+                "count": 4,
+                "data": -1
+            }
+        ]
+    },
     "dec:melon_piece": {
         "type": "shaped",
         "tags": [
@@ -12683,8 +13329,8 @@ window.RecData = {
         "result": [
             {
                 "item": "dec:nature_essence",
-                "data": -1,
-                "count": 1
+                "count": 5,
+                "data": -1
             }
         ]
     },
@@ -13094,20 +13740,6 @@ window.RecData = {
                 ]
             ],
             [
-                [
-                    "minecraft:coal",
-                    -1
-                ],
-                [
-                    "minecraft:coal",
-                    -1
-                ],
-                [
-                    "minecraft:coal",
-                    -1
-                ]
-            ],
-            [
                 null,
                 [
                     "minecraft:bucket",
@@ -13117,12 +13749,73 @@ window.RecData = {
             ]
         ],
         "count": {
-            "minecraft:coal": 6,
+            "minecraft:coal": 3,
             "minecraft:bucket": 1
         },
         "result": [
             {
                 "item": "dec:paraffin_bucket",
+                "data": -1,
+                "count": 1
+            }
+        ]
+    },
+    "dec:patterned_vase_red": {
+        "type": "shaped",
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            [
+                [
+                    "minecraft:brick",
+                    -1
+                ],
+                [
+                    "minecraft:brick",
+                    -1
+                ],
+                [
+                    "minecraft:brick",
+                    -1
+                ]
+            ],
+            [
+                [
+                    "minecraft:brick",
+                    -1
+                ],
+                [
+                    "minecraft:red_dye",
+                    -1
+                ],
+                [
+                    "minecraft:brick",
+                    -1
+                ]
+            ],
+            [
+                [
+                    "minecraft:brick",
+                    -1
+                ],
+                [
+                    "minecraft:brick",
+                    -1
+                ],
+                [
+                    "minecraft:brick",
+                    -1
+                ]
+            ]
+        ],
+        "count": {
+            "minecraft:brick": 8,
+            "minecraft:red_dye": 1
+        },
+        "result": [
+            {
+                "item": "dec:patterned_vase_red",
                 "data": -1,
                 "count": 1
             }
@@ -14160,6 +14853,129 @@ window.RecData = {
             }
         ]
     },
+    "dec:red_patterned_stonebrick": {
+        "type": "shaped",
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            [
+                [
+                    "dec:red_stonebrick",
+                    -1
+                ],
+                [
+                    "minecraft:red_dye",
+                    -1
+                ],
+                [
+                    "dec:red_stonebrick",
+                    -1
+                ]
+            ],
+            [
+                [
+                    "dec:red_stonebrick",
+                    -1
+                ],
+                [
+                    "minecraft:gold_nugget",
+                    -1
+                ],
+                [
+                    "dec:red_stonebrick",
+                    -1
+                ]
+            ],
+            [
+                [
+                    "dec:red_stonebrick",
+                    -1
+                ],
+                [
+                    "minecraft:red_dye",
+                    -1
+                ],
+                [
+                    "dec:red_stonebrick",
+                    -1
+                ]
+            ]
+        ],
+        "count": {
+            "dec:red_stonebrick": 6,
+            "minecraft:red_dye": 2,
+            "minecraft:gold_nugget": 1
+        },
+        "result": [
+            {
+                "item": "dec:red_patterned_stonebrick",
+                "count": 6,
+                "data": -1
+            }
+        ]
+    },
+    "dec:red_stonebrick": {
+        "type": "shaped",
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            [
+                [
+                    "minecraft:brick_block",
+                    -1
+                ],
+                [
+                    "minecraft:brick_block",
+                    -1
+                ],
+                [
+                    "minecraft:brick_block",
+                    -1
+                ]
+            ],
+            [
+                [
+                    "minecraft:brick_block",
+                    -1
+                ],
+                [
+                    "minecraft:red_dye",
+                    -1
+                ],
+                [
+                    "minecraft:brick_block",
+                    -1
+                ]
+            ],
+            [
+                [
+                    "minecraft:brick_block",
+                    -1
+                ],
+                [
+                    "minecraft:brick_block",
+                    -1
+                ],
+                [
+                    "minecraft:brick_block",
+                    -1
+                ]
+            ]
+        ],
+        "count": {
+            "minecraft:brick_block": 8,
+            "minecraft:red_dye": 1
+        },
+        "result": [
+            {
+                "item": "dec:red_stonebrick",
+                "count": 8,
+                "data": -1
+            }
+        ]
+    },
     "dec:rice": {
         "type": "shaped",
         "tags": [
@@ -14635,6 +15451,69 @@ window.RecData = {
             }
         ]
     },
+    "dec:scarecrow": {
+        "type": "shaped",
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            [
+                [
+                    "dec:soul",
+                    -1
+                ],
+                [
+                    "dec:soul",
+                    -1
+                ],
+                [
+                    "minecraft:carved_pumpkin",
+                    -1
+                ]
+            ],
+            [
+                [
+                    "dec:soul",
+                    -1
+                ],
+                [
+                    "minecraft:hay_block",
+                    -1
+                ],
+                [
+                    "dec:soul",
+                    -1
+                ]
+            ],
+            [
+                [
+                    "minecraft:oak_log",
+                    -1
+                ],
+                [
+                    "dec:soul",
+                    -1
+                ],
+                [
+                    "dec:soul",
+                    -1
+                ]
+            ]
+        ],
+        "count": {
+            "dec:soul": 6,
+            "minecraft:carved_pumpkin": 1,
+            "minecraft:hay_block": 1,
+            "minecraft:oak_log": 1
+        },
+        "result": [
+            {
+                "item": "dec:scarecrow",
+                "data": -1,
+                "count": 1
+            }
+        ]
+    },
     "dec:shadow_crystal": {
         "type": "shaped",
         "tags": [
@@ -15005,22 +15884,16 @@ window.RecData = {
         ],
         "pattern": [
             [
+                null,
                 [
-                    "minecraft:coal_block",
+                    "minecraft:coal",
                     -1
                 ],
-                [
-                    "minecraft:coal_block",
-                    -1
-                ],
-                [
-                    "minecraft:coal_block",
-                    -1
-                ]
+                null
             ],
             [
                 [
-                    "minecraft:coal_block",
+                    "minecraft:coal",
                     -1
                 ],
                 [
@@ -15028,27 +15901,21 @@ window.RecData = {
                     -1
                 ],
                 [
-                    "minecraft:coal_block",
+                    "minecraft:coal",
                     -1
                 ]
             ],
             [
+                null,
                 [
-                    "minecraft:coal_block",
+                    "minecraft:coal",
                     -1
                 ],
-                [
-                    "minecraft:coal_block",
-                    -1
-                ],
-                [
-                    "minecraft:coal_block",
-                    -1
-                ]
+                null
             ]
         ],
         "count": {
-            "minecraft:coal_block": 8,
+            "minecraft:coal": 4,
             "dec:wither_substance": 1
         },
         "result": [
@@ -15175,6 +16042,70 @@ window.RecData = {
                 "item": "dec:small_stone_block",
                 "data": 0,
                 "count": 2
+            }
+        ]
+    },
+    "dec:smoke_bomb": {
+        "type": "shaped",
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            [
+                [
+                    "minecraft:gravel",
+                    -1
+                ],
+                [
+                    "minecraft:dirt",
+                    1
+                ],
+                [
+                    "dec:hemp_rope",
+                    -1
+                ]
+            ],
+            [
+                [
+                    "minecraft:dirt",
+                    -1
+                ],
+                [
+                    "minecraft:gunpowder",
+                    -1
+                ],
+                [
+                    "minecraft:dirt",
+                    1
+                ]
+            ],
+            [
+                [
+                    "minecraft:gravel",
+                    -1
+                ],
+                [
+                    "minecraft:dirt",
+                    -1
+                ],
+                [
+                    "minecraft:gravel",
+                    -1
+                ]
+            ]
+        ],
+        "count": {
+            "minecraft:gravel": 3,
+            "minecraft:dirt:1": 2,
+            "dec:hemp_rope": 1,
+            "minecraft:dirt": 2,
+            "minecraft:gunpowder": 1
+        },
+        "result": [
+            {
+                "item": "dec:smoke_bomb",
+                "count": 4,
+                "data": -1
             }
         ]
     },
@@ -17182,8 +18113,14 @@ window.RecData = {
         ],
         "pattern": [
             [
-                null,
-                null,
+                [
+                    "minecraft:copper_block",
+                    -1
+                ],
+                [
+                    "minecraft:copper_block",
+                    -1
+                ],
                 [
                     "dec:lightning_stone",
                     -1
@@ -17198,7 +18135,10 @@ window.RecData = {
                     "dec:lightning_stone",
                     -1
                 ],
-                null
+                [
+                    "minecraft:copper_block",
+                    -1
+                ]
             ],
             [
                 [
@@ -17209,10 +18149,14 @@ window.RecData = {
                     "minecraft:dye",
                     4
                 ],
-                null
+                [
+                    "minecraft:copper_block",
+                    -1
+                ]
             ]
         ],
         "count": {
+            "minecraft:copper_block": 4,
             "dec:lightning_stone": 2,
             "minecraft:dye:4": 2,
             "dec:iron_stick": 1
@@ -18758,6 +19702,489 @@ window.RecData = {
             }
         ]
     },
+    "epic:alliance_token": {
+        "type": "shaped",
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            [
+                null,
+                [
+                    "minecraft:copper_ingot",
+                    -1
+                ],
+                null
+            ],
+            [
+                [
+                    "minecraft:copper_ingot",
+                    -1
+                ],
+                [
+                    "minecraft:emerald",
+                    -1
+                ],
+                [
+                    "minecraft:copper_ingot",
+                    -1
+                ]
+            ],
+            [
+                null,
+                [
+                    "minecraft:copper_ingot",
+                    -1
+                ],
+                null
+            ]
+        ],
+        "count": {
+            "minecraft:copper_ingot": 4,
+            "minecraft:emerald": 1
+        },
+        "result": [
+            {
+                "item": "epic:alliance_token",
+                "data": -1,
+                "count": 1
+            }
+        ]
+    },
+    "epic:cannon_cart_spawn_egg": {
+        "type": "shaped",
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            [
+                [
+                    "minecraft:log",
+                    -1
+                ],
+                [
+                    "minecraft:tnt",
+                    -1
+                ],
+                [
+                    "minecraft:dispenser",
+                    -1
+                ]
+            ],
+            [
+                [
+                    "minecraft:chest",
+                    -1
+                ],
+                [
+                    "epic:crystal_electronics_group",
+                    -1
+                ],
+                [
+                    "epic:reinforced_metal_group",
+                    -1
+                ]
+            ],
+            [
+                [
+                    "minecraft:blast_furnace",
+                    -1
+                ],
+                [
+                    "minecraft:minecart",
+                    -1
+                ],
+                [
+                    "minecraft:observer",
+                    -1
+                ]
+            ]
+        ],
+        "count": {
+            "minecraft:log": 1,
+            "minecraft:tnt": 1,
+            "minecraft:dispenser": 1,
+            "minecraft:chest": 1,
+            "epic:crystal_electronics_group": 1,
+            "epic:reinforced_metal_group": 1,
+            "minecraft:blast_furnace": 1,
+            "minecraft:minecart": 1,
+            "minecraft:observer": 1
+        },
+        "result": [
+            {
+                "item": "epic:cannon_cart_spawn_egg",
+                "data": -1,
+                "count": 1
+            }
+        ]
+    },
+    "epic:crystal_electronics_group_1": {
+        "type": "shaped",
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            [
+                [
+                    "minecraft:diamond",
+                    -1
+                ],
+                [
+                    "minecraft:sea_lantern",
+                    -1
+                ],
+                [
+                    "minecraft:diamond",
+                    -1
+                ]
+            ],
+            [
+                [
+                    "minecraft:gold_block",
+                    -1
+                ],
+                [
+                    "minecraft:end_crystal",
+                    -1
+                ],
+                [
+                    "minecraft:copper_block",
+                    -1
+                ]
+            ],
+            [
+                [
+                    "wb:integrated_circuit_board",
+                    -1
+                ],
+                [
+                    "dec:steel_block",
+                    -1
+                ],
+                [
+                    "wb:integrated_circuit_board",
+                    -1
+                ]
+            ]
+        ],
+        "count": {
+            "minecraft:diamond": 2,
+            "minecraft:sea_lantern": 1,
+            "minecraft:gold_block": 1,
+            "minecraft:end_crystal": 1,
+            "minecraft:copper_block": 1,
+            "wb:integrated_circuit_board": 2,
+            "dec:steel_block": 1
+        },
+        "result": [
+            {
+                "item": "epic:crystal_electronics_group",
+                "data": -1,
+                "count": 1
+            }
+        ]
+    },
+    "epic:crystal_electronics_group_2": {
+        "type": "shaped",
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            [
+                [
+                    "minecraft:amethyst_shard",
+                    -1
+                ],
+                [
+                    "wb:integrated_circuit_board",
+                    -1
+                ],
+                [
+                    "minecraft:amethyst_shard",
+                    -1
+                ]
+            ],
+            [
+                [
+                    "minecraft:amethyst_shard",
+                    -1
+                ],
+                [
+                    "epic:crystal_electronics_group_broken",
+                    -1
+                ],
+                [
+                    "minecraft:amethyst_shard",
+                    -1
+                ]
+            ],
+            [
+                [
+                    "minecraft:gold_ingot",
+                    -1
+                ],
+                [
+                    "dec:steel_ingot",
+                    -1
+                ],
+                [
+                    "minecraft:copper_ingot",
+                    -1
+                ]
+            ]
+        ],
+        "count": {
+            "minecraft:amethyst_shard": 4,
+            "wb:integrated_circuit_board": 1,
+            "epic:crystal_electronics_group_broken": 1,
+            "minecraft:gold_ingot": 1,
+            "dec:steel_ingot": 1,
+            "minecraft:copper_ingot": 1
+        },
+        "result": [
+            {
+                "item": "epic:crystal_electronics_group",
+                "data": -1,
+                "count": 1
+            }
+        ]
+    },
+    "dec:everlasting_winter_pickaxe_axe": {
+        "type": "shaped",
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            [
+                [
+                    "dec:everlasting_winter_ingot",
+                    -1
+                ],
+                [
+                    "minecraft:diamond_axe",
+                    -1
+                ],
+                [
+                    "dec:everlasting_winter_ingot",
+                    -1
+                ]
+            ],
+            [
+                [
+                    "dec:everlasting_winter_ingot",
+                    -1
+                ],
+                [
+                    "minecraft:diamond_pickaxe",
+                    -1
+                ],
+                [
+                    "dec:everlasting_winter_ingot",
+                    -1
+                ]
+            ],
+            [
+                [
+                    "dec:everlasting_winter_stick",
+                    -1
+                ],
+                [
+                    "dec:everlasting_winter_heart",
+                    -1
+                ],
+                [
+                    "dec:everlasting_winter_stick",
+                    -1
+                ]
+            ]
+        ],
+        "count": {
+            "dec:everlasting_winter_ingot": 4,
+            "minecraft:diamond_axe": 1,
+            "minecraft:diamond_pickaxe": 1,
+            "dec:everlasting_winter_stick": 2,
+            "dec:everlasting_winter_heart": 1
+        },
+        "result": [
+            {
+                "item": "dec:everlasting_winter_pickaxe_axe",
+                "data": -1,
+                "count": 1
+            }
+        ]
+    },
+    "iron_crossbow": {
+        "type": "shaped",
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            [
+                [
+                    "minecraft:spyglass",
+                    -1
+                ],
+                [
+                    "dec:steel_ingot",
+                    -1
+                ],
+                [
+                    "minecraft:iron_ingot",
+                    -1
+                ]
+            ],
+            [
+                [
+                    "dec:steel_ingot",
+                    -1
+                ],
+                [
+                    "minecraft:crossbow",
+                    -1
+                ],
+                [
+                    "minecraft:string",
+                    -1
+                ]
+            ],
+            [
+                [
+                    "minecraft:iron_ingot",
+                    -1
+                ],
+                [
+                    "minecraft:string",
+                    -1
+                ],
+                [
+                    "dec:steel_ingot",
+                    -1
+                ]
+            ]
+        ],
+        "count": {
+            "minecraft:spyglass": 1,
+            "dec:steel_ingot": 3,
+            "minecraft:iron_ingot": 2,
+            "minecraft:crossbow": 1,
+            "minecraft:string": 2
+        },
+        "result": [
+            {
+                "item": "epic:iron_crossbow",
+                "data": -1,
+                "count": 1
+            }
+        ]
+    },
+    "epic:machanical_operator": {
+        "type": "shaped",
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            [
+                null,
+                [
+                    "minecraft:redstone_block",
+                    -1
+                ],
+                null
+            ],
+            [
+                null,
+                [
+                    "minecraft:iron_ingot",
+                    -1
+                ],
+                null
+            ],
+            [
+                null,
+                [
+                    "minecraft:stick",
+                    -1
+                ],
+                null
+            ]
+        ],
+        "count": {
+            "minecraft:redstone_block": 1,
+            "minecraft:iron_ingot": 1,
+            "minecraft:stick": 1
+        },
+        "result": [
+            {
+                "item": "epic:machanical_operator",
+                "data": -1,
+                "count": 1
+            }
+        ]
+    },
+    "epic:reinforced_metal_group": {
+        "type": "shaped",
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            [
+                [
+                    "minecraft:copper_block",
+                    -1
+                ],
+                [
+                    "minecraft:iron_block",
+                    -1
+                ],
+                [
+                    "minecraft:copper_block",
+                    -1
+                ]
+            ],
+            [
+                [
+                    "dec:steel_block",
+                    -1
+                ],
+                [
+                    "minecraft:gold_block",
+                    -1
+                ],
+                [
+                    "dec:steel_block",
+                    -1
+                ]
+            ],
+            [
+                [
+                    "minecraft:copper_block",
+                    -1
+                ],
+                [
+                    "minecraft:iron_block",
+                    -1
+                ],
+                [
+                    "minecraft:copper_block",
+                    -1
+                ]
+            ]
+        ],
+        "count": {
+            "minecraft:copper_block": 4,
+            "minecraft:iron_block": 2,
+            "dec:steel_block": 2,
+            "minecraft:gold_block": 1
+        },
+        "result": [
+            {
+                "item": "epic:reinforced_metal_group",
+                "data": -1,
+                "count": 1
+            }
+        ]
+    },
     "wb:conveyor_issue": {
         "type": "shaped",
         "tags": [
@@ -18840,14 +20267,14 @@ window.RecData = {
             ],
             [
                 [
-                    "wb:staff_base",
+                    "dec:energy_ray_staff",
                     -1
                 ]
             ]
         ],
         "count": {
             "wb:mineral_magic_barrier": 2,
-            "wb:staff_base": 1
+            "dec:energy_ray_staff": 1
         },
         "result": [
             {
@@ -19206,7 +20633,7 @@ window.RecData = {
             ],
             [
                 [
-                    "wb:staff_base",
+                    "dec:diamond_staff",
                     -1
                 ]
             ]
@@ -19214,7 +20641,7 @@ window.RecData = {
         "count": {
             "wb:element_frost": 1,
             "wb:base_core_b": 1,
-            "wb:staff_base": 1
+            "dec:diamond_staff": 1
         },
         "result": [
             {
@@ -19244,7 +20671,7 @@ window.RecData = {
             ],
             [
                 [
-                    "wb:staff_base",
+                    "dec:golden_staff",
                     -1
                 ]
             ]
@@ -19252,7 +20679,7 @@ window.RecData = {
         "count": {
             "wb:element_bright": 1,
             "wb:base_core_a": 1,
-            "wb:staff_base": 1
+            "dec:golden_staff": 1
         },
         "result": [
             {
@@ -19333,7 +20760,7 @@ window.RecData = {
             ],
             [
                 [
-                    "wb:staff_base",
+                    "dec:blaze_staff",
                     -1
                 ]
             ]
@@ -19341,7 +20768,7 @@ window.RecData = {
         "count": {
             "wb:element_flame": 1,
             "wb:base_core_b": 1,
-            "wb:staff_base": 1
+            "dec:blaze_staff": 1
         },
         "result": [
             {
@@ -19371,7 +20798,7 @@ window.RecData = {
             ],
             [
                 [
-                    "wb:staff_base",
+                    "dec:thunder_staff",
                     -1
                 ]
             ]
@@ -19379,7 +20806,7 @@ window.RecData = {
         "count": {
             "wb:element_summon": 1,
             "wb:base_core_d": 1,
-            "wb:staff_base": 1
+            "dec:thunder_staff": 1
         },
         "result": [
             {
@@ -19409,7 +20836,7 @@ window.RecData = {
             ],
             [
                 [
-                    "wb:staff_base",
+                    "dec:emerald_staff",
                     -1
                 ]
             ]
@@ -19417,7 +20844,7 @@ window.RecData = {
         "count": {
             "wb:element_wind": 1,
             "wb:base_core_c": 1,
-            "wb:staff_base": 1
+            "dec:emerald_staff": 1
         },
         "result": [
             {
@@ -19833,7 +21260,7 @@ window.RecData = {
             ],
             [
                 [
-                    "wb:staff_base",
+                    "wb:staff_fire",
                     -1
                 ]
             ]
@@ -19841,7 +21268,7 @@ window.RecData = {
         "count": {
             "wb:element_flame": 1,
             "wb:base_core_g": 1,
-            "wb:staff_base": 1
+            "wb:staff_fire": 1
         },
         "result": [
             {
@@ -25333,43 +26760,6 @@ window.RecData = {
             }
         ]
     },
-    "wb:staff_base": {
-        "type": "shaped",
-        "tags": [
-            "crafting_table"
-        ],
-        "pattern": [
-            [
-                [
-                    "wb:mineral_senior_equipment",
-                    -1
-                ]
-            ],
-            [
-                [
-                    "wb:mineral_senior_equipment",
-                    -1
-                ]
-            ],
-            [
-                [
-                    "minecraft:stick",
-                    -1
-                ]
-            ]
-        ],
-        "count": {
-            "wb:mineral_senior_equipment": 2,
-            "minecraft:stick": 1
-        },
-        "result": [
-            {
-                "item": "wb:staff_base",
-                "data": -1,
-                "count": 1
-            }
-        ]
-    },
     "wb:sword_bloodsucking_a": {
         "type": "shaped",
         "tags": [
@@ -26929,425 +28319,6 @@ window.RecData = {
         "result": [
             {
                 "item": "wb:sword_water_e",
-                "data": -1,
-                "count": 1
-            }
-        ]
-    },
-    "epic:alliance_token": {
-        "type": "shaped",
-        "tags": [
-            "crafting_table"
-        ],
-        "pattern": [
-            [
-                null,
-                [
-                    "minecraft:copper_ingot",
-                    -1
-                ],
-                null
-            ],
-            [
-                [
-                    "minecraft:copper_ingot",
-                    -1
-                ],
-                [
-                    "minecraft:emerald",
-                    -1
-                ],
-                [
-                    "minecraft:copper_ingot",
-                    -1
-                ]
-            ],
-            [
-                null,
-                [
-                    "minecraft:copper_ingot",
-                    -1
-                ],
-                null
-            ]
-        ],
-        "count": {
-            "minecraft:copper_ingot": 4,
-            "minecraft:emerald": 1
-        },
-        "result": [
-            {
-                "item": "epic:alliance_token",
-                "data": -1,
-                "count": 1
-            }
-        ]
-    },
-    "epic:cannon_cart_spawn_egg": {
-        "type": "shaped",
-        "tags": [
-            "crafting_table"
-        ],
-        "pattern": [
-            [
-                [
-                    "minecraft:log",
-                    -1
-                ],
-                [
-                    "minecraft:tnt",
-                    -1
-                ],
-                [
-                    "minecraft:dispenser",
-                    -1
-                ]
-            ],
-            [
-                [
-                    "minecraft:chest",
-                    -1
-                ],
-                [
-                    "epic:crystal_electronics_group",
-                    -1
-                ],
-                [
-                    "epic:reinforced_metal_group",
-                    -1
-                ]
-            ],
-            [
-                [
-                    "minecraft:blast_furnace",
-                    -1
-                ],
-                [
-                    "minecraft:minecart",
-                    -1
-                ],
-                [
-                    "minecraft:observer",
-                    -1
-                ]
-            ]
-        ],
-        "count": {
-            "minecraft:log": 1,
-            "minecraft:tnt": 1,
-            "minecraft:dispenser": 1,
-            "minecraft:chest": 1,
-            "epic:crystal_electronics_group": 1,
-            "epic:reinforced_metal_group": 1,
-            "minecraft:blast_furnace": 1,
-            "minecraft:minecart": 1,
-            "minecraft:observer": 1
-        },
-        "result": [
-            {
-                "item": "epic:cannon_cart_spawn_egg",
-                "data": -1,
-                "count": 1
-            }
-        ]
-    },
-    "epic:crystal_electronics_group_1": {
-        "type": "shaped",
-        "tags": [
-            "crafting_table"
-        ],
-        "pattern": [
-            [
-                [
-                    "minecraft:diamond",
-                    -1
-                ],
-                [
-                    "minecraft:sea_lantern",
-                    -1
-                ],
-                [
-                    "minecraft:diamond",
-                    -1
-                ]
-            ],
-            [
-                [
-                    "minecraft:gold_block",
-                    -1
-                ],
-                [
-                    "minecraft:end_crystal",
-                    -1
-                ],
-                [
-                    "minecraft:copper_block",
-                    -1
-                ]
-            ],
-            [
-                [
-                    "wb:integrated_circuit_board",
-                    -1
-                ],
-                [
-                    "dec:steel_block",
-                    -1
-                ],
-                [
-                    "wb:integrated_circuit_board",
-                    -1
-                ]
-            ]
-        ],
-        "count": {
-            "minecraft:diamond": 2,
-            "minecraft:sea_lantern": 1,
-            "minecraft:gold_block": 1,
-            "minecraft:end_crystal": 1,
-            "minecraft:copper_block": 1,
-            "wb:integrated_circuit_board": 2,
-            "dec:steel_block": 1
-        },
-        "result": [
-            {
-                "item": "epic:crystal_electronics_group",
-                "data": -1,
-                "count": 1
-            }
-        ]
-    },
-    "epic:crystal_electronics_group_2": {
-        "type": "shaped",
-        "tags": [
-            "crafting_table"
-        ],
-        "pattern": [
-            [
-                [
-                    "minecraft:amethyst_shard",
-                    -1
-                ],
-                [
-                    "wb:integrated_circuit_board",
-                    -1
-                ],
-                [
-                    "minecraft:amethyst_shard",
-                    -1
-                ]
-            ],
-            [
-                [
-                    "minecraft:amethyst_shard",
-                    -1
-                ],
-                [
-                    "epic:crystal_electronics_group_broken",
-                    -1
-                ],
-                [
-                    "minecraft:amethyst_shard",
-                    -1
-                ]
-            ],
-            [
-                [
-                    "minecraft:gold_ingot",
-                    -1
-                ],
-                [
-                    "dec:steel_ingot",
-                    -1
-                ],
-                [
-                    "minecraft:copper_ingot",
-                    -1
-                ]
-            ]
-        ],
-        "count": {
-            "minecraft:amethyst_shard": 4,
-            "wb:integrated_circuit_board": 1,
-            "epic:crystal_electronics_group_broken": 1,
-            "minecraft:gold_ingot": 1,
-            "dec:steel_ingot": 1,
-            "minecraft:copper_ingot": 1
-        },
-        "result": [
-            {
-                "item": "epic:crystal_electronics_group",
-                "data": -1,
-                "count": 1
-            }
-        ]
-    },
-    "iron_crossbow": {
-        "type": "shaped",
-        "tags": [
-            "crafting_table"
-        ],
-        "pattern": [
-            [
-                [
-                    "minecraft:spyglass",
-                    -1
-                ],
-                [
-                    "dec:steel_ingot",
-                    -1
-                ],
-                [
-                    "minecraft:iron_ingot",
-                    -1
-                ]
-            ],
-            [
-                [
-                    "dec:steel_ingot",
-                    -1
-                ],
-                [
-                    "minecraft:crossbow",
-                    -1
-                ],
-                [
-                    "minecraft:string",
-                    -1
-                ]
-            ],
-            [
-                [
-                    "minecraft:iron_ingot",
-                    -1
-                ],
-                [
-                    "minecraft:string",
-                    -1
-                ],
-                [
-                    "dec:steel_ingot",
-                    -1
-                ]
-            ]
-        ],
-        "count": {
-            "minecraft:spyglass": 1,
-            "dec:steel_ingot": 3,
-            "minecraft:iron_ingot": 2,
-            "minecraft:crossbow": 1,
-            "minecraft:string": 2
-        },
-        "result": [
-            {
-                "item": "epic:iron_crossbow",
-                "data": -1,
-                "count": 1
-            }
-        ]
-    },
-    "epic:machanical_operator": {
-        "type": "shaped",
-        "tags": [
-            "crafting_table"
-        ],
-        "pattern": [
-            [
-                null,
-                [
-                    "minecraft:redstone_block",
-                    -1
-                ],
-                null
-            ],
-            [
-                null,
-                [
-                    "minecraft:iron_ingot",
-                    -1
-                ],
-                null
-            ],
-            [
-                null,
-                [
-                    "minecraft:stick",
-                    -1
-                ],
-                null
-            ]
-        ],
-        "count": {
-            "minecraft:redstone_block": 1,
-            "minecraft:iron_ingot": 1,
-            "minecraft:stick": 1
-        },
-        "result": [
-            {
-                "item": "epic:machanical_operator",
-                "data": -1,
-                "count": 1
-            }
-        ]
-    },
-    "epic:reinforced_metal_group": {
-        "type": "shaped",
-        "tags": [
-            "crafting_table"
-        ],
-        "pattern": [
-            [
-                [
-                    "minecraft:copper_block",
-                    -1
-                ],
-                [
-                    "minecraft:iron_block",
-                    -1
-                ],
-                [
-                    "minecraft:copper_block",
-                    -1
-                ]
-            ],
-            [
-                [
-                    "dec:steel_block",
-                    -1
-                ],
-                [
-                    "minecraft:gold_block",
-                    -1
-                ],
-                [
-                    "dec:steel_block",
-                    -1
-                ]
-            ],
-            [
-                [
-                    "minecraft:copper_block",
-                    -1
-                ],
-                [
-                    "minecraft:iron_block",
-                    -1
-                ],
-                [
-                    "minecraft:copper_block",
-                    -1
-                ]
-            ]
-        ],
-        "count": {
-            "minecraft:copper_block": 4,
-            "minecraft:iron_block": 2,
-            "dec:steel_block": 2,
-            "minecraft:gold_block": 1
-        },
-        "result": [
-            {
-                "item": "epic:reinforced_metal_group",
                 "data": -1,
                 "count": 1
             }

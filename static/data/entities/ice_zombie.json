@@ -7,7 +7,6 @@
       "is_summonable": true,
       "is_experimental": false
     },
-
     "component_groups": {
       "minecraft:despawn": {
         "minecraft:instant_despawn": {}
@@ -27,18 +26,28 @@
       },
       "minecraft:look_to_start_zombie_transformation": {
         "minecraft:environment_sensor": {
-          "filters": {
-            "test": "is_underwater", "subject": "self", "operator": "==", "value": true
-          },
-          "event": "minecraft:start_transforming"
+          "triggers": {
+            "filters": {
+              "test": "is_underwater",
+              "subject": "self",
+              "operator": "==",
+              "value": true
+            },
+            "event": "minecraft:start_transforming"
+          }
         }
       },
       "minecraft:start_zombie_transformation": {
         "minecraft:environment_sensor": {
-          "filters": {
-            "test": "is_underwater", "subject": "self", "operator": "==", "value": false
-          },
-          "event": "minecraft:stop_transforming"
+          "triggers": {
+            "filters": {
+              "test": "is_underwater",
+              "subject": "self",
+              "operator": "==",
+              "value": false
+            },
+            "event": "minecraft:stop_transforming"
+          }
         },
         "minecraft:timer": {
           "looping": false,
@@ -48,7 +57,6 @@
           }
         }
       },
-
       "minecraft:convert_to_zombie": {
         "minecraft:transformation": {
           "into": "minecraft:zombie<minecraft:as_adult>",
@@ -58,10 +66,8 @@
             "value": 15
           }
         },
-        "minecraft:is_shaking": {
-        }
+        "minecraft:is_shaking": {}
       },
-
       "minecraft:convert_to_baby_zombie": {
         "minecraft:transformation": {
           "into": "minecraft:zombie<minecraft:as_baby>",
@@ -71,10 +77,8 @@
             "value": 15
           }
         },
-        "minecraft:is_shaking": {
-        }
+        "minecraft:is_shaking": {}
       },
-
       "minecraft:zombie_husk_baby": {
         "minecraft:is_baby": {},
         "minecraft:scale": {
@@ -84,7 +88,6 @@
           "value": 0.35
         }
       },
-
       "minecraft:zombie_husk_adult": {
         "minecraft:movement": {
           "value": 0.23
@@ -95,7 +98,11 @@
             "zombie"
           ],
           "seats": {
-            "position": [ 0.0, 1.1, -0.35 ],
+            "position": [
+              0.0,
+              1.1,
+              -0.35
+            ],
             "lock_rider_rotation": 0
           }
         },
@@ -109,7 +116,6 @@
           "value": 1.0625
         }
       },
-
       "minecraft:zombie_husk_jockey": {
         "minecraft:behavior.find_mount": {
           "priority": 1,
@@ -117,7 +123,6 @@
         }
       }
     },
-
     "components": {
       "minecraft:despawn": {
         "despawn_from_distance": {}
@@ -127,18 +132,22 @@
         "suffocateTime": 0,
         "breathesWater": true
       },
-        "minecraft:experience_reward": {
-          "on_death": "query.last_hit_by_player ? 7 + (query.equipment_count * Math.Random(1,3)) : 0"
-        },
+      "minecraft:experience_reward": {
+        "on_death": "query.last_hit_by_player ? 7 + (query.equipment_count * Math.Random(1,3)) : 0"
+      },
       "minecraft:collision_box": {
         "width": 0.6,
         "height": 1.8
       },
-      "minecraft:nameable": {
-      },
-
+      "minecraft:nameable": {},
       "minecraft:type_family": {
-        "family": [ "ice_zombie", "zombie", "undead", "monster", "frozen" ]
+        "family": [
+          "ice_zombie",
+          "zombie",
+          "undead",
+          "monster",
+          "frozen"
+        ]
       },
       "minecraft:loot": {
         "table": "loot_tables/entities/ice_zombie.json"
@@ -168,7 +177,6 @@
           }
         ]
       },
-
       "minecraft:health": {
         "value": {
           "range_min": 30,
@@ -189,17 +197,12 @@
         "can_break_doors": true,
         "avoid_portals": false
       },
-      "minecraft:annotation.break_door": {
-      },
-      "minecraft:movement.basic": {
-
-      },
-      "minecraft:jump.static": {
-      },
-      "minecraft:can_climb": {
-      },
-      "minecraft:environment_sensor": [
-        {
+      "minecraft:annotation.break_door": {},
+      "minecraft:movement.basic": {},
+      "minecraft:jump.static": {},
+      "minecraft:can_climb": {},
+      "minecraft:environment_sensor": {
+        "triggers": {
           "filters": {
             "test": "is_underwater",
             "subject": "self",
@@ -208,7 +211,7 @@
           },
           "event": "minecraft:start_transforming"
         }
-      ],
+      },
       "minecraft:behavior.melee_attack": {
         "priority": 3,
         "speed_multiplier": 1,
@@ -250,9 +253,21 @@
           {
             "filters": {
               "any_of": [
-                { "test": "is_family", "subject": "other", "value": "player" },
-                { "test": "is_family", "subject": "other", "value": "snowgolem" },
-                { "test": "is_family", "subject": "other", "value": "irongolem" }
+                {
+                  "test": "is_family",
+                  "subject": "other",
+                  "value": "player"
+                },
+                {
+                  "test": "is_family",
+                  "subject": "other",
+                  "value": "snowgolem"
+                },
+                {
+                  "test": "is_family",
+                  "subject": "other",
+                  "value": "irongolem"
+                }
               ]
             },
             "max_dist": 35
@@ -260,8 +275,16 @@
           {
             "filters": {
               "any_of": [
-                { "test": "is_family", "subject": "other", "value": "villager" },
-                { "test": "is_family", "subject": "other", "value": "wandering_trader" }
+                {
+                  "test": "is_family",
+                  "subject": "other",
+                  "value": "villager"
+                },
+                {
+                  "test": "is_family",
+                  "subject": "other",
+                  "value": "wandering_trader"
+                }
               ]
             },
             "max_dist": 35,
@@ -270,8 +293,17 @@
           {
             "filters": {
               "all_of": [
-                { "test": "is_family", "subject": "other", "value": "baby_turtle" },
-                { "test": "in_water", "subject": "other", "operator": "!=", "value": true }
+                {
+                  "test": "is_family",
+                  "subject": "other",
+                  "value": "baby_turtle"
+                },
+                {
+                  "test": "in_water",
+                  "subject": "other",
+                  "operator": "!=",
+                  "value": true
+                }
               ]
             },
             "max_dist": 35
@@ -279,10 +311,8 @@
         ],
         "must_see": true
       },
-      "minecraft:physics": {
-      }
+      "minecraft:physics": {}
     },
-
     "events": {
       "minecraft:despawn": {
         "add": {
@@ -303,8 +333,7 @@
         "randomize": [
           {
             "weight": 9500,
-            "remove": {
-            },
+            "remove": {},
             "add": {
               "component_groups": [
                 "minecraft:zombie_husk_adult"
@@ -313,25 +342,21 @@
           },
           {
             "weight": 425,
-            "remove": {
-            },
+            "remove": {},
             "add": {
               "component_groups": [
                 "minecraft:zombie_husk_baby"
               ]
-
             }
           },
           {
             "weight": 75,
-            "remove": {
-            },
+            "remove": {},
             "add": {
               "component_groups": [
                 "minecraft:zombie_husk_baby",
                 "minecraft:zombie_husk_jockey"
               ]
-
             }
           }
         ]
@@ -343,7 +368,9 @@
           ]
         },
         "remove": {
-          "component_groups": [ "minecraft:look_to_start_zombie_transformation" ]
+          "component_groups": [
+            "minecraft:look_to_start_zombie_transformation"
+          ]
         }
       },
       "minecraft:stop_transforming": {
@@ -367,10 +394,14 @@
               "value": "minecraft:is_baby"
             },
             "add": {
-              "component_groups": [ "minecraft:convert_to_zombie" ]
+              "component_groups": [
+                "minecraft:convert_to_zombie"
+              ]
             },
             "remove": {
-              "component_groups": [ "minecraft:start_zombie_transformation" ]
+              "component_groups": [
+                "minecraft:start_zombie_transformation"
+              ]
             }
           },
           {
@@ -379,10 +410,14 @@
               "value": "minecraft:is_baby"
             },
             "add": {
-              "component_groups": [ "minecraft:convert_to_baby_zombie" ]
+              "component_groups": [
+                "minecraft:convert_to_baby_zombie"
+              ]
             },
             "remove": {
-              "component_groups": [ "minecraft:start_zombie_transformation" ]
+              "component_groups": [
+                "minecraft:start_zombie_transformation"
+              ]
             }
           }
         ]

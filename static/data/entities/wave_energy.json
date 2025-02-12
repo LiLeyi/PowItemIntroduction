@@ -6,13 +6,7 @@
     "runtime_identifier": "minecraft:egg",
     "is_spawnable": false,
     "is_summonable": true,
-    "is_experimental": false,
-    "scripts":{
-      "animate":["ticking"]
-    },
-      "animations":{
-        "ticking":"controller.animation.particle_wave_wake"
-    }
+    "is_experimental": false
   },
   "components": {
    "minecraft:collision_box": {
@@ -40,7 +34,7 @@
     "inertia": 1,
     "liquid_inertia": 1.2,
     "anchor": 1,
-    "offset": [ 0, 0, 1 ],
+    "offset": [ 0, 0, 0],
     "semirandomdiffdamage": true,
     "uncertaintyBase": 6.0,
     "uncertaintyMultiplier": 6,

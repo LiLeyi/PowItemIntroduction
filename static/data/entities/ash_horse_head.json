@@ -49,6 +49,7 @@
       "minecraft:knockback_resistance": {
         "value": 1
       },
+      "minecraft:tick_world": {},
       "minecraft:boss": {
         "should_darken_sky": false,
         "name": "boss.dec:ash_horse_head.name",
@@ -181,7 +182,7 @@
     },
     "events": {
       "minecraft:next": {
-        "run_command": {
+        "queue_command": {
           "command": [//这里也记得改
             "summon dec:ash_monster ~~~",
             "summon dec:ash_monster ~~~"

@@ -36,7 +36,7 @@
         "power": 2.1,
         "gravity": 0.03,
         "inertia": 1.1,
-        "offset": [ 0, 0, 1 ],
+        "offset": [ 0, 0, 0],
         "uncertaintyBase": 6.0,
         "angleoffset": 0.0
       },
@@ -58,7 +58,7 @@
           },
           {
             "weight": 3,
-            "run_command": {
+            "queue_command": {
               "command": [
                 "damage @e[r=3,type=!item] 12 entity_explosion",
                 "particle dec:lava_spurt_particle ~~~",

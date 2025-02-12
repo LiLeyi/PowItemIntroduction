@@ -1,9 +1,9 @@
 function page_spawn(s, l) {
     let tran_dict = [DefaultTran]
     //标题
-    let page_title = window.AddName + translate(lang,tran_dict,'text.dec:title.name')
-    document.title = page_title
-    document.getElementById('title').innerHTML = page_title
+    // let page_title = window.AddName + translate(lang,tran_dict,'text.dec:title.name')
+    // document.title = page_title
+    // document.getElementById('title').innerHTML = page_title
 
     //语言选择
     lang_str = ''
@@ -31,7 +31,7 @@ function page_spawn(s, l) {
             } else {
                 name = window.AddData[item]['lang'][lang]
             }
-            strf = strf + '<div class="item" id="' + id_infact + '"><img onerror="javascript:this.hidden = true" loading="lazy" class="item_icon" src="static/data/' + window.AddData[item]['texture'] + '.png"><a href="' + a_h + '">' + String(name) + '</a></div>'
+            strf = strf + '<div class="item" id="' + id_infact + '" onClick="window.open(\''+a_h+'\',\'_self\')"><img onerror="javascript:this.hidden = true" loading="lazy" class="item_icon" src="static/data/' + window.AddData[item]['texture'] + '.png">' + String(name) + '</div>'
             return strf
         }
         if (s == 'undefined' || s == '') {
